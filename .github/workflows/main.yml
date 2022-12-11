@@ -24,7 +24,7 @@ jobs:
 
 
       - name: SETUP .NET CORE
-        uses: action/setup-dotnet@v1
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
