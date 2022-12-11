@@ -3,24 +3,24 @@ name: Deploy ASP.NET CORE
 on: 
   push: 
     branches:
-      -main
+      - main
 
 env: 
   AZURE_WEBAPP_NAME: csweb0619202
   AZURE_WEBAPP_PATH: '.'
-  DOTNET_VERSION: '2.2.101'
+  DOTNET_VERSION: '7.0.100'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
 
-      uses: actions/checkout@main
+      - uses: actions/checkout@main
 
-      -name: Login via Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Login via Azure CLI
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
 
 
       - name: SETUP .NET CORE
