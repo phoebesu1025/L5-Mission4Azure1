@@ -30,8 +30,8 @@ jobs:
 
       - name: dotnet build + publish
         run: 
-          dotnet build --configuration release
-          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PATH }}/myapp'
+          dotnet build --configuration Release
+          dotnet publish --configuration Release --no-build --output "${{ env.AZURE_WEBAPP_PATH }}"
 
       - name: Deploy to App Service
         uses: azure/webapps-deploy@v2
