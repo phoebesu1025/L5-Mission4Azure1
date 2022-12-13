@@ -6,7 +6,7 @@ on:
       - main
 
 env: 
-  AZURE_WEBAPP_NAME: csweb0619202
+  AZURE_WEBAPP_NAME: Mission4
   AZURE_WEBAPP_PATH: '.'
   DOTNET_VERSION: '7.0.100'
 
@@ -30,8 +30,8 @@ jobs:
 
       - name: dotnet build + publish
         run: 
-          dotnet build --configuration Release
-          dotnet publish --configuration Release --no-build --output "${{ env.AZURE_WEBAPP_PATH }}"
+          dotnet build --configuration release
+          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PATH }}/myapp'
 
       - name: Deploy to App Service
         uses: azure/webapps-deploy@v2
