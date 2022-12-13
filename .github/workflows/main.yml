@@ -28,12 +28,9 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      - name: dotnet build 
+      - name: dotnet build + publish
         run: 
           dotnet build --configuration release
-
-      - name: dotnet publish
-        run:
           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PATH }}/myapp'
 
       - name: Deploy to App Service
