@@ -1,0 +1,24 @@
+{
+  "name": "l5-mission4azure1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoebesu1025/L5-Mission4Azure1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phoebesu1025/L5-Mission4Azure1/issues"
+  },
+  "homepage": "https://github.com/phoebesu1025/L5-Mission4Azure1#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
